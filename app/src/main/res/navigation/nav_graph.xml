@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/cameraFragment">
+
+    <fragment
+        android:id="@+id/permissionsFragment"
+        android:name="bk.github.camerax.PermissionsFragment"
+        android:label="fragment_permissions"
+        tools:layout="@layout/fragment_permissions" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="bk.github.camerax.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_permissionsFragment"
+            app:destination="@id/permissionsFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+</navigation>
